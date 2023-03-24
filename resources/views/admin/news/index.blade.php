@@ -2,11 +2,13 @@
 
 @section('content')
 
-@foreach ($news as $n)
-    <h4>{{ $n->title }}</h4>
-    <p>{{ $n->content }}</p>
-@endforeach
-
-
-{{ $news->withQueryString()->links() }}
+<div class="row flex-wrap w-50">
+    <div class="list-group mt-3 ms-3">
+    @foreach($news as $n)
+        <a href="#" class="list-group-item list-group-item-action">{{ $n->id }}. {{ $n->title }}</a>
+        @endforeach
+    </div>
+    
+    {{ $news->withQueryString()->links() }}
+</div>
 @endsection

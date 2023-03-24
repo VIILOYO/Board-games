@@ -32,7 +32,7 @@ Route::group([
     'as' => 'news.',
 ], function () {
     // Новости
-    //Route::get('/', IndexController::class)->name('index');
+    Route::get('/', IndexController::class)->name('index');
 });
 
 Auth::routes();

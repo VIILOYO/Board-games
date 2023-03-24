@@ -20,7 +20,7 @@ class NewsFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(3),
-            'url' => $this->faker->url(),
+            'url' => $this->faker->word(),
             'content' => $this->faker->paragraph(4, true),
         ];
     }

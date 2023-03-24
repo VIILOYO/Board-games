@@ -12,7 +12,7 @@ class IndexController extends Controller
      */
     public function __invoke()
     {
-        $news = News::paginate(10);
+        $news = News::paginate(20);
 
         return view('admin.news.index', compact('news'));
     }
