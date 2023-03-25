@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto px-0">
+            <div class="col-2 px-0">
                 <div id="sidebar" class="collapse collapse-horizontal show border-end vh-100 shadow-sm">
                     <div id="sidebar-nav" class="list-group border-0 rounded-0">
                         <div class="p-2">
