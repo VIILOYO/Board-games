@@ -18,7 +18,7 @@ class AdminPanelMiddleware
         if(auth()->user() && auth()->user()->role === 'admin') {
             return $next($request);
         } else {
-            return redirect()->route('home');
+            return redirect()->route('news.index');
         }
     }
 }

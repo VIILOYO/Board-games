@@ -13,7 +13,7 @@
                 <div class="card-body text-start">
                     <h5 class="card-title">Пользователи</h5>
                     <p class="card-text"><i class="fa-regular fa-user"></i> {{ count($statUsers) }}</p>
-                    <a href="#" class="btn btn-primary">Список</a>
+                    <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Список</a>
                 </div>
             </div>
         </div>

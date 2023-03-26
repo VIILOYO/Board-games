@@ -31,6 +31,15 @@
                             <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action">
                                 Общая статистика
                             </a>
+                            <!-- Выход -->
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                {{ __('Выйти') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </div>
                 </div>

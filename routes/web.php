@@ -25,6 +25,14 @@ Route::group([
         Route::post('/', StoreController::class)->name('store');
         Route::get('/{news}', ShowController::class)->name('show');
     });
+
+    Route::group([
+        'namespace' => 'User',
+        'prefix' => 'users',
+        'as' => 'users.',
+    ], function () {
+        Route::get('/', IndexController::class)->name('index');
+    });
 });
 
 // Пользовательская часть
@@ -40,3 +48,6 @@ Route::group([
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return redirect()->route('home');
+});
