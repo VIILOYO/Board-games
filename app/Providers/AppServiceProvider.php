@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::defaultView('vendor.pagination.bootstrap-5');
+        View::share('title', 'Хромой мипл');
         View::share('statUsers', User::all());
         View::share('statNews', News::all());
     }

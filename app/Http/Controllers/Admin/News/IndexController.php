@@ -13,7 +13,8 @@ class IndexController extends Controller
     public function __invoke()
     {
         $news = News::paginate(20);
+        $title = 'Список новостей';
 
-        return view('admin.news.index', compact('news'));
+        return view('admin.news.index', compact('news', 'title'));
     }
 }

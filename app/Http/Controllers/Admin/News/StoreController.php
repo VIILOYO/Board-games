@@ -26,6 +26,6 @@ class StoreController extends Controller
             ]);
         }
 
-        return redirect()->route('admin.news.index');
+        return redirect()->route('admin.news.show', compact('news'));
     }
 }

@@ -23,6 +23,7 @@
                     <h5 class="card-title">Новости</h5>
                     <p class="card-text"><i class="fa-regular fa-paper-plane"></i> {{ count($statNews) }}</p>
                     <a href="{{ route('admin.news.index') }}" class="btn btn-primary">Список</a>
+                    <a href="{{ route('admin.news.create') }}" class="btn btn-primary ms-2">Добавить</a>
                 </div>
             </div>
         </div>
