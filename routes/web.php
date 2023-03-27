@@ -32,6 +32,7 @@ Route::group([
         'as' => 'users.',
     ], function () {
         Route::get('/', IndexController::class)->name('index');
+        Route::put('/{user}', ChangeController::class)->name('change');
     });
 });
 
