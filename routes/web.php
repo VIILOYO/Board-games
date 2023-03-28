@@ -24,6 +24,9 @@ Route::group([
         Route::get('/create', CreateController::class)->name('create');
         Route::post('/', StoreController::class)->name('store');
         Route::get('/{news}', ShowController::class)->name('show');
+        Route::get('/{news}/edit', EditController::class)->name('edit');
+        Route::put('/{news}', UpdateController::class)->name('update');
+        Route::delete('/{news}', DestroyController::class)->name('destroy');
     });
 
     Route::group([

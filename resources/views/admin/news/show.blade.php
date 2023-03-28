@@ -27,6 +27,17 @@
                     <h3 class="card-title">{{ $news->title }}</h3>
                     <h5 class="card-text">{{ $news->content }}</h5>
                     <p class="card-text"><small class="text-body-secondary">{{ $news->created_at }}</small></p>
+
+                    <form action="{{ route('admin.news.edit', $news) }}" method="post" style="float: left;">
+                        @csrf
+                        <button type="submit" class="btn btn-success">Редактировать</button>
+                    </form>
+
+                    <form action="{{ route('admin.news.destroy', $news) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-danger">Удалить безвозвратно</button>
+                    </form>
                 </div>
             </div>
         </div>
