@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,9 @@ Route::group([
 });
 
 // Пользовательская часть
+Route::get('/', [HomeController::class, 'index']);
+
+// Новости сайта
 Route::group([
     'namespace' => 'App\Http\Controllers\News',
     'prefix' => 'news',
@@ -50,8 +54,3 @@ Route::group([
 });
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', function () {
-    return redirect()->route('home');
-});
